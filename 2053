@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+        int n;
+        while(scanf("%d",&n)!=EOF)
+        {
+            int t=0;       //初始状态为0
+            for(int i=1;i<=n;i++)  //用for循环模拟第n次的灯泡状态
+            {
+                if(n%i==0)    
+                {　　　　　　//如果n是操作次数i的倍数，则改变灯泡状态
+                    t=!t; 
+                }
+            }
+            printf("%d\n",t);//输出第n个灯泡的状态
+        }
+
+        return 0;
+
+}
